@@ -15,7 +15,7 @@ public class Tournament {
     private String name;
     private String location;
 
-    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "tournament_id")
     private List<Registration> registrations = new ArrayList<>();
 
