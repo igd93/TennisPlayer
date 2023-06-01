@@ -16,7 +16,7 @@ public class Category {
     private String name;
 
     @ManyToMany(mappedBy = "playingCategories", cascade = {CascadeType.DETACH, CascadeType.MERGE,
-            CascadeType.PERSIST, CascadeType.REFRESH})
+            CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JsonIgnoreProperties("playingCategories")
     private List<Tournament> tournaments = new ArrayList<>();
 

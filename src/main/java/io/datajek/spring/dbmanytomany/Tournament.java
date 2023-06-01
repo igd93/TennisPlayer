@@ -23,7 +23,7 @@ public class Tournament {
     @JoinTable(
             name = "tournament_categories",
             joinColumns = @JoinColumn(name = "tournament_id"),
-            inverseJoinColumns = @JoinColumn(name="category_id")
+            inverseJoinColumns = @JoinColumn(name= "category_id")
     )
     @JsonIgnoreProperties("tournaments")
     private List<Category> playingCategories = new ArrayList<>();
